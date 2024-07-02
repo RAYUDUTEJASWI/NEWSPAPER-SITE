@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIS-WALA</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">AVIS-WALA</div>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" style="background-color:blue;">Search</button>
+        </form> -->
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          
+    
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+    
+            <li><a href="/">HOME</a></li>
+            <li><a href="vender.html">BECOME A SUPPLIER</a></li>
+    
+            <li class="services">
+              <a href="cart.html">SHOP MILK</a>
+              <li><a href="contact.html">GIVE ADVERTISEMENT</a></li>
+    
+    
+              <!-- DROPDOWN MENU -->
+             
+            </li>
+    
+            <li><a href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+              <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"/>
+            </svg> PROFILE</a></li>
+            <li><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+              <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+            </svg>LOGIN</a></li>
+            <li><a href="chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-robot" viewBox="0 0 16 16">
+              <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/>
+              <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/>
+            </svg>HELP BOOT</a></li>
+            
+          </div>
+        </ul>
+      </nav>
+      <hr>
+      <!-- nav bar 2 -->
+     
+      <nav class="navbar">
+      
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+    <!-- telugu -->
+            <li class="services">
+              <a href="/">TELUGU</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="/">
+                <li><a href="/">SAKSHI</a></li>
+                <li><a href="/">SURYA</a></li>
+                <li><a href="/">EENADU</a></li>
+                <li><a href="/">ANDHRA JYOTHI</a></li>
+               </ul>
+              </li>
+    <!-- english -->
+            <li class="services">
+              <a href="/">ENGLISH</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="/">THE ECONOMIC TIMES</a></li>
+                <li><a href="/">THE HINDUSTAN TIMES</a></li>
+                <li><a href="/">THE TIMES OF INDIA</a></li>
+                <li><a href="/">The Shillong Times</a></li>
+                </ul>
+              </li>
+      
+<!-- TAMIL -->
+<li class="services">
+  <a href="/">HINDI</a>
+  <!-- DROPDOWN MENU -->
+  <ul class="dropdown">
+    <li><a href="/">DAINIK BHASKAR</a></li>
+    <li><a href="/">DAINIK JAGRAN</a></li>
+    <li><a href="/">NAVBHARAT TIMES</a></li>
+    <li><a href="/">HINDUSTAN</a></li>
+    </ul>
+  </li>
+  <!-- MALAYALAM -->
+  <li class="services">
+    <a href="/">TAMIL</a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown">
+      <li><a href="/">DINAKARAN</a></li>
+      <li><a href="/">DINAMALAR</a></li>
+      <li><a href="/">DINA THANTI</a></li>
+      <li><a href="/">TAMIL MURASU</a></li>
+      </ul>
+    </li>
+
+    <!-- MALAYALAM -->
+  <li class="services">
+    <a href="/">MALAYALAM</a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown">
+      <li><a href="/">MADHYAMAM</a></li>
+      <li><a href="/">MALAYALA MANORAMA</a></li>
+      <li><a href="/">DESHABHIMANI</a></li>
+      <li><a href="/">JANAYUGOM</a></li>
+      </ul>
+    </li>
+    
+    <!-- MALAYALAM -->
+  <li class="services">
+    <a href="/">BENGALI</a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown">
+      <li><a href="/">ANANDABAZAR PATRIKA TODAY</a></li>
+      <li><a href="/">ANANDABAZAR PATRIKA TODAY</a></li>
+      <li><a href="/">EBLEA NEWSPAPER</a></li>
+      <li><a href="/">AAJKAA</a></li>
+      </ul>
+    </li>
+
+    <!-- hindi -->
+    <li class="services">
+      <a href="/">PUNJABI</a>
+      <!-- DROPDOWN MENU -->
+      <ul class="dropdown">
+        <li><a href="/">JAGBANI NEWSPAPER</a></li>
+        <li><a href="/">PUNJABI TRIBUNE</a></li>
+        <li><a href="/">Punjab Kesar</a></li>
+        <li><a href="/">JAG BANI</a></li>
+        </ul>
+      </li>
+    
+    <!-- MALAYALAM -->
+  <li class="services">
+    <a href="/">MARATHI</a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown">
+      <li><a href="/">MAHARASHTRA TIMES</a></li>
+      <li><a href="/">LOKSATTA</a></li>
+      <li><a href="/">SAAMANA</a></li>
+      <li><a href="/">PUDHARI</a></li>
+      </ul>
+    </li>
+    
+    <!-- MALAYALAM -->
+  <li class="services">
+    <a href="/">GUJRATHI</a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown">
+      <li><a href="/">DIVYA BHASKAR</a></li>
+      <li><a href="/">JANMABHUMI</a></li>
+      <li><a href="/">SAMBHAAV</a></li>
+      <li><a href="/">GUJARAT TODAY</a></li>
+      </ul>
+    </li>
+    <!--  -->
+    <li class="services">
+      <a href="/">KANNADA</a>
+      <!-- DROPDOWN MENU -->
+      <ul class="dropdown">
+        <li><a href="/">KANNADA PRABHA</a></li>
+        <li><a href="/">SAMYUKTA KARNATAKA</a></li>
+        <li><a href="/">UDAYAVANI</a></li>
+        <li><a href="/">PRAJAVANI</a></li>
+        </ul>
+      </li>
+    </div>
+        </ul>
+      </nav>
+      <hr>
+      <!-- <img class="news" src="image/collection-newspapers.jpg" alt="newspaper"> -->
+
+      <hr>
+      <!-- coluas -->
+      <div class="slider">
+        <input type="radio" name="toggle" id="btn-1" checked>
+        <input type="radio" name="toggle" id="btn-2">
+        <input type="radio" name="toggle" id="btn-3">
+      
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+      
+        <ul class="slides">
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">HEADLINE #1</h2>
+              <p class="slide-text">Make your payments easy and generate your paperbill easily and get on time paperdelivery at your home</p>
+              <a href="#" class="slide-link">MORE</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/collection-newspapers.jpg" alt="stuff" width="320" height="240">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">HEADLINE #2</h2>
+              <p class="slide-text">Have a Amazingexperiance while using the application</p>
+              <a href="#" class="slide-link">Amazing deal</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/depositphotos_108226546-stock-illustration-selling-newspaper-with-bicycle.jpg" alt="stuff" width="320" height="240">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">HEADLINE #3</h2>
+              <p class="slide-text">Quisquam quod ut quasi, vero obcaecati laudantium asperiores corporis ad atque. Expedita fugit dicta maxime vel doloribus sequi, facilis dignissimos.</p>
+              <a href="#" class="slide-link">Get started</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/istockphoto-1330788505-612x612.jpg" alt="stuff" width="320" height="240">
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- cao -->
+      <!-- CART -->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWSPAPER</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .image-container {
+          display: flex; /* Use flexbox for horizontal alignment */
+      }
+
+      .image-container img {
+          margin-right: 10px; /* Optional spacing between images */
+      }
+  </style>
+</head>
+<body>
+
+
+<div class="div1">
+      <h1>TELUGU</h1>
+      
+      <div class="image-container">
+          <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckSCt7C50JtsbtyDkc3pu5y2Q79Bo6hGCAQ&usqp=CAU" height="150" width="300" alt="Image 1">
+          <h3>SAKSHI</h3>
+            <p>Price: Rs3.00</p>
+            <a href="payment.html"><button onclick="addToCart('Product 1', 3.00)">SUBSCRIBE</button></a>
+            </div>
+            <div>
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3aqQdbXo3KXaBOB8Ly4W6RfJgJacFexcjHQ&usqp=CAU" height="150" width="300" alt="Image 2">
+          <h3>SURYA</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxwVFS6ItfD2CEL8Ivu0CT_2ZIAj5wgZhJjA&usqp=CAU" alt="Image 3" height="150" width="300">
+          <h3>EENADU</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      <div>
+        <img src="https://smartads.in/resources/assets/uploads/product_group/newspaper/andhra-jyothi.jpg" alt="Image 3" height="150" width="300">
+      <h3>ANDHRA JYOTHI</h3>
+      <p>Price: Rs3.00</p>
+      <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+  </div>
+  </div> 
+  
+  <div>
+  <h1>ENGLISH</h1>
+      
+      <div class="image-container">
+          <div><img src="https://smartads.in/resources/assets/uploads/product_group/newspaper/economic-times.png" height="150" width="300" alt="Image 1">
+          <h3>THE ECONOMIC TIMES</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://logowik.com/content/uploads/images/hindustan-times9271.jpg" height="150" width="300" alt="Image 2">
+          <h3>THE HINDUSTAN TIMES</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://www.pngitem.com/pimgs/m/334-3344553_times-of-india-logo-png-transparent-png.png" alt="Image 3" height="150" width="300">
+          <h3>THE TIMES OF INDIA</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+
+          <div>
+          <img src="https://play-lh.googleusercontent.com/gpP9KpIcs_xsAyCznSVrtpiG3U68RYSUuPHRE8JOyl2p1-liMvyCG4jI5cRe50K7AQ" alt="Image 3" height="150" width="300">
+          <h3>The Shillong Times</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+<div>
+      <h1>HINDI</h1>
+      
+      <div class="image-container">
+          <div><img src="https://logos-download.com/wp-content/uploads/2019/07/Dainik_Bhaskar_Logo.png" height="150" width="300" alt="Image 1">
+          <h3>DAINIK BHASKAR</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://seeklogo.com/images/D/dainik-jagran-logo-C3602BC021-seeklogo.com.png" height="150" width="300" alt="Image 2">
+          <h3>DAINIK JAGRAN</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://ads.timesgroup.com/assets/images/NBT.png" alt="Image 3" height="150" width="300">
+          <h3>NAVBHARAT TIMES</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+          <div>
+          <img src="https://india.mom-gmr.org/uploads/tx_lfrogmom/media/16510-1592_import.png" alt="Image 3" height="150" width="300">
+          <h3>HINDUSTAN</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+
+
+
+<div>
+      <h1>TAMIL</h1>
+      
+      <div class="image-container">
+          <div><img src="http://india.mom-gmr.org/typo3temp/_processed_/1/2/csm_16660-1592_import_24e7a1f2e2.png" height="150" width="300" alt="Image 1">
+          <h3>DINAKARAN</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="http://india.mom-gmr.org/typo3temp/_processed_/f/e/csm_16661-1592_import_5264415e6f.png" height="150" width="300" alt="Image 2">
+          <h3>DINAMALAR</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="http://india.mom-gmr.org/typo3temp/_processed_/d/0/csm_16503-1592_import_32911034c3.png" alt="Image 3" height="150" width="300">
+          <h3>DINA THANTI</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+          
+          <div>
+          <img src="https://www.malaimurasu.com/uploads/logo/logo_60abc7a318fb8.jpeg" alt="Image 3" height="150" width="300">
+          <h3>TAMIL MURASU</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+
+<div>
+      <h1>MALAYALAM</h1>
+      
+      <div class="image-container">
+          <div><img src="https://www.madhyamam.com/uploads/2020/06/29/file_upload-633486.png" height="150" width="300" alt="Image 1">
+          <h3>MADHYAMAM</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://india.mom-gmr.org/uploads/tx_lfrogmom/media/16504-1592_import.png" height="150" width="300" alt="Image 2">
+          <h3>MALAYALA MANORAMA</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://www.reachkerala.com/wp-content/uploads/kerala-info-91.jpg" alt="Image 3" height="150" width="300">
+          <h3>DESHABHIMANI</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+          
+          <div>
+          <img src="https://the-media-ant.mo.cloudinary.net/medias/57e39f8c4773d5503f389392/1677663652163/janayogam%20logo_logo.png?tx=w_350" alt="Image 3" height="150" width="300">
+          <h3>JANAYUGOM</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+
+
+
+
+  
+
+    <div>  <h1>BENGALI</h1>
+      
+      <div class="image-container">
+          <div><img src="https://apiexcellent.com/images/digital/product/eisamay-digital10272.webp" height="150" width="300" alt="Image 1">
+          <h3>ANANDABAZAR PATRIKA TODAY</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://assets.telegraphindia.com/abp/2021/Jan/1610963059_abp_og_image.png" height="150" width="300" alt="Image 2">
+          <h3>ANANDABAZAR PATRIKA TODAY</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://gumlet.assettype.com/afaqs%2Fimport%2Fall%2Fnews%2Fimages%2Fnews_story_grfx%2F2012%2F35346_1_home_big.jpg?format=webp&w=300&dpr=1.0" alt="Image 3" height="150" width="300">
+          <h3>EBLEA NEWSPAPER</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+          
+          <div>
+          <img src="https://www.eaajkaal.in/Content/images/aajkaal_logo.png" alt="Image 3" height="150" width="300">
+          <h3>AAJKAA</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+
+
+
+<div>
+      <h1>PUNJABI</h1>
+      
+      <div class="image-container">
+          <div><img src="https://play-lh.googleusercontent.com/j9tsHUsJYWJdvc8tzpIOcDlGN4ZEaPmqJ_7hdm6IFWEAV33EF_Z1h_JL64JEc8IEZ2U" height="150" width="300" alt="Image 1">
+          <h3>JAGBANI NEWSPAPER</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYai2txA_CADAJ2dgUtlE6eLSGo6Y7KIIJDr7RsrrItWPr49425ArZQguhCMnIT2f3rQ&usqp=CAU" height="150" width="300" alt="Image 2">
+          <h3>PUNJABI TRIBUNE</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+            <div><img src="https://www.bookadinnewspaper.in/images/newspaper-logo/Punjab-Kesari-logo-b.jpg" height="150" width="300" alt="Image 1">
+            <h3>Punjab Kesar</h3>
+              <p>Price: Rs3.00</p>
+              <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+              </div>
+              
+              <div>
+          <img src="https://www.ranklogos.com/wp-content/uploads/2012/08/Jagvani.jpg" height="150" width="300" alt="Image 1">
+          <h3>JAG BANI</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+              </div>
+      
+
+
+<div>
+      <h1>MARATHI</h1>
+      
+      <div class="image-container">
+          <div><img src="https://static.mediawire.in/brands/profilepic/91179/Media-Logo_Maharashtra-Times.png" height="150" width="300" alt="Image 1">
+          <h3>MAHARASHTRA TIMES</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Loksatta_-_Lokmanya_Lokshakti_Logo.gif/1200px-Loksatta_-_Lokmanya_Lokshakti_Logo.gif" height="150" width="300" alt="Image 2">
+          <h3>LOKSATTA</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://www.saamana.com/wp-content/uploads/2019/03/saamana-logo-web.png" alt="Image 3" height="150" width="300">
+          <h3>SAAMANA</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('PRODUCT 1', 3.00)">Add to Cart</button>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pudhari_Newspaper_Logo.png" alt="Image 3" height="150" width="300">
+          <h3>PUDHARI</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+   
+<div>
+      <h1>GUJRATHI</h1>
+      
+      <div class="image-container">
+          <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLsc-NGTC_jlWYdhwHUIT9yMqElIBGddZCHJ0NN7nBU9RTzXA04yh1V9sGysp6dTGxk6o&usqp=CAU" height="150" width="300" alt="Image 1">
+          <h3>DIVYA BHASKAR</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCch-rABc0Xpouam_mEznmOmj1WwKMXro2fbLE6HxYdi7CmosbOv9V_7dOgpHm94orIQ&usqp=CAU" height="150" width="300" alt="Image 2">
+          <h3>JANMABHUMI</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwOJUGhM4s5x0UHsXbPNQRr6kt5E3uEDep1_4InbFalUzYwdGZFBASU6N8VMWWrKSzLjo&usqp=CAU" alt="Image 3" height="150" width="300">
+          <h3>SAMBHAAV</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      
+      
+      <div>
+          <img src="https://yt3.googleusercontent.com/ytc/AOPolaRsNAfnkdIW1aBWbSA85kny2aHXPIwemuUTFOOVnA=s900-c-k-c0x00ffffff-no-rj" alt="Image 3" height="150" width="300">
+          <h3>GUJARAT TODAY</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div></div>
+<div>
+
+      <h1>KANNADA</h1>
+      
+      <div class="image-container">
+          <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6_LgI8ZHJ-IHtr6-eRrgr2V2FDu6imlTO9fV8AoiJ8Fs1mOMkeSi1LcMJUXcHTdhSg&usqp=CAU" height="150" width="300" alt="Image 1">
+          <h3>KANNADA PRABHA</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+            </div>
+            <div>
+          <img src="https://www.sscldl.in/wp-content/uploads/2019/11/1-6.png" height="150" width="300" alt="Image 2">
+          <h3>SAMYUKTA KARNATAKA</h3>
+            <p>Price: Rs3.00</p>
+            <button onclick="addToCart('Product 1', 3.00)">Add to Cart</button>
+          </div>
+          <div>
+            <img src="https://www.cmcaindia.org/wp-content/uploads/2019/01/udayavani-logo.png" alt="Image 3" height="150" width="300">
+          <h3>UDAYAVANI</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+          <div>
+          <img src="https://www.cmcaindia.org/wp-content/uploads/2019/01/prajavani-logo.png" alt="Image 3" height="150" width="300">
+          <h3>PRAJAVANI</h3>
+          <p>Price: Rs3.00</p>
+          <button onclick="addToCart('Image 3', 3.00)">Add to Cart</button></div>
+      </div>
+</body>
+</html>
+      <!-- CARTS -->
+     
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+  </html>
+  

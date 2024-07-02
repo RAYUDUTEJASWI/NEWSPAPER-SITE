@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Management System</title>
+    <style>
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color:white;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color:white;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Supplier Management System</h1>
+    </header>
+    <div class="split left">
+        <div class="centered">
+          
+            <div class="container">
+                <h2>Supplier List</h2>
+                <ul id="supplierList">
+                    <!-- Supplier data will be dynamically loaded here -->
+                </ul>
+            </div>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+         <div>
+            <h2>Add New Supplier</h2>
+            <form id="supplierForm">
+                <label for="supplierName">Supplier Name:</label>
+                <input type="text" id="supplierName" required>
+    
+                <label for="supplierContact">Contact Information:</label>
+                <input type="text" id="supplierContact" required>
+    
+                <button type="submit">Add Supplier</button>
+            </form>
+        </div>
+        </div>
+      </div>
+
+    <script>
+        // JavaScript for adding suppliers and displaying the list
+        const supplierList = document.getElementById("supplierList");
+        const supplierForm = document.getElementById("supplierForm");
+
+        supplierForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const supplierName = document.getElementById("supplierName").value;
+            const supplierContact = document.getElementById("supplierContact").value;
+
+            // You would typically send this data to a server for processing and storage
+            // Here, we'll just add it to the list for demonstration purposes
+            const newSupplierItem = document.createElement("li");
+            newSupplierItem.textContent = `${supplierName} - ${supplierContact}`;
+            supplierList.appendChild(newSupplierItem);
+
+            // Clear the form fields
+            document.getElementById("supplierName").value = "";
+            document.getElementById("supplierContact").value = "";
+        });
+    </script>
+</body>
+</html>

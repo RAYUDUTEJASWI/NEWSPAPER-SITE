@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AI Chatbot</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>AVIS-WALA Chatbot</h1>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+    // Get DOM elements
+const chatBox = document.getElementById('chat-box');
+const userInput = document.getElementById('user-input');
+const sendButton = document.getElementById('send-button');
+
+// Function to add a message to the chat box
+function addMessage(sender, message) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = sender;
+    messageDiv.innerHTML = message;
+    chatBox.appendChild(messageDiv);
+}
+
+// Event listener for the send button
+sendButton.addEventListener('click', function () {
+    const userMessage = userInput.value;
+    if (userMessage.trim() !== '') {
+        addMessage('user', userMessage);
+        userInput.value = ''; // Clear the input field
+
+        // Send the user message to the AI agent (you would replace this with your AI integration)
+        // For this example, we'll simulate a response after a delay.
+        setTimeout(function () {
+            const aiResponse = "This is the AI's response.";
+            addMessage('ai', aiResponse);
+        }, 1000); // Simulated delay
+
+        // You can replace the simulated AI response with actual integration to a chatbot API.
+    }
+});
+
+// Simulate an initial greeting from the AI when the page loads
+window.addEventListener('load', function () {
+    const aiGreeting = "Hello! How can I assist you today?";
+    addMessage('ai', aiGreeting);
+});
+
+</script>
+</html>
